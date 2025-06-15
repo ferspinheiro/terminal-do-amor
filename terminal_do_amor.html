@@ -1,63 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Terminal do Amor</title>
-    <style>
-        body {
-            background-color: #0f0f0f;
-            color: #33ff33;
-            font-family: monospace;
-            padding: 20px;
-        }
-        #terminal {
-            max-width: 100%;
-            white-space: pre-wrap;
-        }
-        input {
-            background: none;
-            border: none;
-            color: #33ff33;
-            font-family: monospace;
-            width: 100%;
-            font-size: 1em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Terminal do Amor</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #33ff33;
+      font-family: monospace;
+      padding: 20px;
+    }
+    #terminal {
+      max-width: 100%;
+      white-space: pre-wrap;
+    }
+    input {
+      background: none;
+      border: none;
+      color: #33ff33;
+      font-family: monospace;
+      width: 100%;
+      font-size: 1em;
+      outline: none;
+    }
+  </style>
 </head>
 <body>
-    <div id="terminal">
-        Bem-vindo ao Terminal do Amor 💘<br>
-        Usuária: Sua Princesa 👑<br>
-        Digite um comando para começar...<br><br>
-    </div>
-    <input id="commandInput" autofocus placeholder="Digite um comando...">
-    <script>
-        const terminal = document.getElementById('terminal');
-        const input = document.getElementById('commandInput');
+  <div id="terminal">
+    Bem-vindo ao Terminal do Amor 💘<br>
+    Usuária: Sua Princesa 👑<br>
+    Digite um comando para começar...<br><br>
+  </div>
+  <input id="commandInput" autofocus placeholder="Digite um comando...">
+  <script>
+    const terminal = document.getElementById('terminal');
+    const input = document.getElementById('commandInput');
 
-        const commands = {
-            "java -jar amor_suaprincesa.jar": "Iniciando sistema...\nConexão segura com Hugo estabelecida 💘",
-            "status": "Status atual: Pensando em você 24/7.",
-            "./compilar_amor.sh": "Compilando... Sem erros. Tudo perfeito como o sorriso do Hugo 😍",
-            "saudade --check": "Nível atual de saudade: 99.99%\nMotivo: você tá longe, mas ainda é meu lugar preferido.",
-            "./teamo.sh": "❤️ System.out.println("Eu te amo mais que café quente e cobertor em dia frio.")",
-            "./bug_hugo.sh": "Erro: Nenhum bug encontrado. Hugo é flawless.",
-            "./beijar.sh": "*Beijo enviado com sucesso* 💋\n(Local: bochecha, pescoço, testa… escolha seu destino 😏)",
-            "./abraçar.sh": "Abraço virtual ativado. Durará até você estar aqui pra valer. 🤗",
-            "./meleva.sh": "🧳 Preparando viagem imaginária pra um lugar onde só existe eu e você.",
-            "./exit": "Erro 403: Você não pode sair do meu coração."
-        };
+    const commands = {
+      "java -jar amor_suaprincesa.jar": "Iniciando sistema...\\nConexão segura com Hugo estabelecida 💘",
+      "status": "Status atual: Pensando em você 24/7.",
+      "./compilar_amor.sh": "Compilando... Sem erros. Tudo perfeito como o sorriso do Hugo 😍",
+      "saudade --check": "Nível atual de saudade: 99.99%\\nMotivo: você tá longe, mas ainda é meu lugar preferido.",
+      "./teamo.sh": "❤️ System.out.println(\\"Eu te amo mais que café quente e cobertor em dia frio.\\")",
+      "./bug_hugo.sh": "Erro: Nenhum bug encontrado. Hugo é flawless.",
+      "./beijar.sh": "*Beijo enviado com sucesso* 💋\\n(Local: bochecha, pescoço, testa… escolha seu destino 😏)",
+      "./abraçar.sh": "Abraço virtual ativado. Durará até você estar aqui pra valer. 🤗",
+      "./meleva.sh": "🧳 Preparando viagem imaginária pra um lugar onde só existe eu e você.",
+      "./exit": "Erro 403: Você não pode sair do meu coração."
+    };
 
-        input.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                const command = input.value.trim();
-                terminal.innerHTML += "> " + command + "\n";
-                terminal.innerHTML += (commands[command] || "Comando não reconhecido 😢") + "\n\n";
-                input.value = '';
-                window.scrollTo(0, document.body.scrollHeight);
-            }
-        });
-    </script>
+    input.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        const command = input.value.trim();
+        terminal.innerHTML += "> " + command + "\\n";
+        terminal.innerHTML += (commands[command] || "Comando não reconhecido 😢") + "\\n\\n";
+        input.value = '';
+        window.scrollTo(0, document.body.scrollHeight);
+      }
+    });
+  </script>
 </body>
 </html>
